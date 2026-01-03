@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Petstore API Suite" verbose="1" parallel="false">
+    <test name="User API Tests">
+        <classes>
+            <class name="com.earlbertmercado.restassured.petstore.tests.UserTest"/>
+        </classes>
+    </test>
+    <test name="Pet API Tests">
+        <classes>
+            <class name="com.earlbertmercado.restassured.petstore.tests.PetTest"/>
+        </classes>
+    </test>
+    <test name="Store API Tests">
+        <classes>
+            <class name="com.earlbertmercado.restassured.petstore.tests.StoreTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Order",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "petId": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "shipDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["placed", "approved", "delivered"]
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  },
+  "required": ["id", "petId", "quantity", "shipDate", "status", "complete"]
+}

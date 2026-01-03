@@ -1,0 +1,29 @@
+[2026-01-04 00:13:30] INFO  ReportManager - Test started: testAddNewPet
+[2026-01-04 00:13:30] INFO  ReportManager - Adding new pet {petId=1001, name=buddy, status=available, categoryId=10, categoryName=dogs, photoUrls=https://example.com/images/buddy.jpg, tagId=1, tagName=friendly}
+[2026-01-04 00:13:30] INFO  ReportManager - Request: Pet(id=1001, category=Pet.Category(id=10, name=dogs), name=buddy, photoUrls=[https://example.com/images/buddy.jpg], tags=[Pet.Tag(id=1, name=friendly)], status=available)
+[2026-01-04 00:13:30] INFO  BaseClient - Executing POST request to: /pet
+[2026-01-04 00:13:32] INFO  ReportManager - Response: {"id":1001,"category":{"id":10,"name":"dogs"},"name":"buddy","photoUrls":["https://example.com/images/buddy.jpg"],"tags":[{"id":1,"name":"friendly"}],"status":"available"}
+[2026-01-04 00:13:32] INFO  ReportManager - Create Response Status: 200
+[2026-01-04 00:13:32] INFO  ReportManager - PASS: Test passed: testAddNewPet
+[2026-01-04 00:13:32] INFO  ReportManager - Completed test: testAddNewPet
+[2026-01-04 00:13:32] INFO  ReportManager - Test started: testFindPetById
+[2026-01-04 00:13:32] INFO  ReportManager - Fetching pet 1001
+[2026-01-04 00:13:32] INFO  BaseClient - Executing GET request to: /pet/{petId}
+[2026-01-04 00:13:33] INFO  ReportManager - Response: {"id":1001,"category":{"id":10,"name":"dogs"},"name":"buddy","photoUrls":["https://example.com/images/buddy.jpg"],"tags":[{"id":1,"name":"friendly"}],"status":"available"}
+[2026-01-04 00:13:33] INFO  ReportManager - PASS: Test passed: testFindPetById
+[2026-01-04 00:13:33] INFO  ReportManager - Completed test: testFindPetById
+[2026-01-04 00:13:33] INFO  ReportManager - Test started: testUpdatePet
+[2026-01-04 00:13:33] INFO  ReportManager - Updating pet 1001
+[2026-01-04 00:13:33] INFO  ReportManager - Request: Pet(id=0, category=Pet.Category(id=10, name=dogs), name=buddy, photoUrls=[https://example.com/images/buddy.jpg], tags=[Pet.Tag(id=1, name=friendly)], status=unavailable)
+[2026-01-04 00:13:33] INFO  BaseClient - Executing PUT request to: /pet
+[2026-01-04 00:13:34] INFO  ReportManager - Response: {"id":9223372036854775807,"category":{"id":10,"name":"dogs"},"name":"buddy","photoUrls":["https://example.com/images/buddy.jpg"],"tags":[{"id":1,"name":"friendly"}],"status":"unavailable"}
+[2026-01-04 00:13:34] INFO  ReportManager - PASS: Test passed: testUpdatePet
+[2026-01-04 00:13:34] INFO  ReportManager - Completed test: testUpdatePet
+[2026-01-04 00:13:34] INFO  ReportManager - Test started: testDeletePet
+[2026-01-04 00:13:34] INFO  ReportManager - Deleting pet 1001
+[2026-01-04 00:13:34] INFO  BaseClient - Executing DELETE request to: /pet/{petId}
+[2026-01-04 00:13:36] INFO  ReportManager - Response: {"code":200,"type":"unknown","message":"1001"}
+[2026-01-04 00:13:36] INFO  ReportManager - PASS: Test passed: testDeletePet
+[2026-01-04 00:13:36] INFO  ReportManager - Completed test: testDeletePet
+[2026-01-04 00:13:36] INFO  ReportManager - Test Suite Completed
+[2026-01-04 00:13:36] INFO  ReportManager - Extent report flushed
