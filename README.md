@@ -67,8 +67,8 @@ restassured-petstore/
     ```bash
     mvn clean install
     ```
-3. ### Update configurations (if needed) in `src/main/resources/config.properties`
-4. ### Add test data in `src/test/resources/testdata/PetStoreTestData.xlsx`
+3. ### Update configurations (if needed) in ```src/main/resources/config.properties```
+4. ### Add test data in ```src/test/resources/testdata/PetStoreTestData.xlsx```
 
 ## Running Tests
 
