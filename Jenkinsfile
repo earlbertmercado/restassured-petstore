@@ -12,8 +12,8 @@ pipeline {
 
     parameters {
         choice(
-            name: 'TEST_CLASS'
-            choices: ['All Tests', 'PetTest', 'StoreTest', 'UserTest']
+            name: 'TEST_CLASS',
+            choices: ['All Tests', 'PetTest', 'StoreTest', 'UserTest'],
             description: 'Select which test class to execute'
         )
     }
