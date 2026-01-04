@@ -12,17 +12,16 @@ reporting and logging capabilities.
  - JSON schema validation.
 
 ## Technologies Used
-|                   |                       |
-|-------------------|-----------------------|
-| Language          | **Java**              |
-| Build Tool        | **Maven**             |
-| UI Framework      | **Playwright**        |
-| Testing Framework | **TestNG**            |
-| Design Pattern    | **Page Object Model** |
-| Logging           | **Log4j2**            |
-| Reporting         | **ExtentReports**     |
-| Remote Execution  | **Selenium Grid**     |
-| CI/CD             | **Jenkins**           |
+|                     |                   |
+|---------------------|-------------------|
+| Language            | **Java**          |
+| Build Tool          | **Maven**         |
+| API Automation      | **RestAssured**   |
+| Testing Framework   | **TestNG**        |
+| Code Simplification | **Lombok**        |
+| Logging             | **Log4j2**        |
+| Reporting           | **ExtentReports** |
+| CI/CD               | **Jenkins**       |
 
 ## Folder Structure
 ```text
