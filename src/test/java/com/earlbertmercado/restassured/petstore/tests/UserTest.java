@@ -1,7 +1,6 @@
 package com.earlbertmercado.restassured.petstore.tests;
 
 import com.earlbertmercado.restassured.petstore.base.BaseTest;
-import com.earlbertmercado.restassured.petstore.clients.UserClient;
 import com.earlbertmercado.restassured.petstore.payloads.User;
 import com.earlbertmercado.restassured.petstore.utils.ReportManager;
 import com.earlbertmercado.restassured.petstore.utils.SchemaValidator;
@@ -14,8 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 public class UserTest extends BaseTest {
-
-    private final UserClient userClient = new UserClient();
 
     @Test(
             dataProvider = "userData",
