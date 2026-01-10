@@ -1,7 +1,6 @@
 package com.earlbertmercado.restassured.petstore.tests;
 
 import com.earlbertmercado.restassured.petstore.base.BaseTest;
-import com.earlbertmercado.restassured.petstore.clients.StoreClient;
 import com.earlbertmercado.restassured.petstore.payloads.Store;
 import com.earlbertmercado.restassured.petstore.utils.ReportManager;
 import com.earlbertmercado.restassured.petstore.utils.SchemaValidator;
@@ -13,8 +12,6 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 public class StoreTest extends BaseTest {
-
-    private final StoreClient storeClient = new StoreClient();
 
     @Test(
             dataProvider = "storeData",

@@ -1,15 +1,26 @@
 package com.earlbertmercado.restassured.petstore.base;
 
+import com.earlbertmercado.restassured.petstore.clients.PetClient;
+import com.earlbertmercado.restassured.petstore.clients.StoreClient;
+import com.earlbertmercado.restassured.petstore.clients.UserClient;
 import com.earlbertmercado.restassured.petstore.config.ConfigManager;
 import com.earlbertmercado.restassured.petstore.utils.ReportManager;
 import io.restassured.RestAssured;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 public abstract class BaseTest {
+
+    protected PetClient petClient;
+    protected StoreClient storeClient;
+    protected UserClient userClient;
+
+    @BeforeClass
+    public void setupClients() {
+        this.petClient = new PetClient();
+        this.storeClient = new StoreClient();
+        this.userClient = new UserClient();
+    }
 
     @BeforeSuite
     public void beforeSuite() {
