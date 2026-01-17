@@ -1,15 +1,16 @@
 ![restassured_logo](assets/restassured_logo.png)
 
 # Overview
-A comprehensive, data-driven test automation framework for Swagger PetStore API using RestAssured with built-in 
-reporting and logging capabilities.
+A data-driven API test automation framework built with RestAssured and integrated with Docker and Jenkins for reliable CI execution, reporting, and logging.
 
 ## Features
- - Robust API testing with built-in validation.
- - Modular design with separation of concerns.
- - Data-Driven Testing.
- - Interactive reports and comprehensive logging.
- - JSON schema validation.
+ - Robust API testing with built-in request and response validation
+ - Modular, scalable framework with clear separation of concerns
+ - Data-driven testing using external test data sources
+ - Interactive HTML reporting and comprehensive Log4j2-based logging
+ - JSON schema validation for contract-level API verification
+ - Containerized test execution using Docker for environment consistency
+ - CI-ready execution via Jenkins pipelines
 
 ## Technologies Used
 |                     |                   |
@@ -99,13 +100,21 @@ mvn test -DsuiteXmlFile=testng.xml
     ```bash
     docker build -t restassured-petstore-tests .
     ```
- - Run tests inside Docker container
+ - Run all tests inside Docker container
     ```bash
     docker run --rm \
         -v $(pwd)/target:/app/target \
         -v $(pwd)/reports:/app/reports \
         -v $(pwd)/logs:/app/logs \
         restassured-petstore-tests
+    ```
+ - Run specific test inside Docker container
+    ```bash
+    docker run --rm \
+        -v $(pwd)/target:/app/target \
+        -v $(pwd)/reports:/app/reports \
+        -v $(pwd)/logs:/app/logs \
+        restassured-petstore-tests -Dtest=PetTest
     ```
     Reports and logs will be available locally after execution.
 
