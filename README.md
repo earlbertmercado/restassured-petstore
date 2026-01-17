@@ -22,6 +22,7 @@ reporting and logging capabilities.
 | Logging             | **Log4j2**        |
 | Reporting           | **ExtentReports** |
 | CI/CD               | **Jenkins**       |
+| Containerization    | **Docker**        |
 
 ## Folder Structure
 ```text
@@ -48,6 +49,7 @@ restassured-petstore/
 │       └── resources/
 │           ├── testdata/           # External test data for data-driven testing
 │           └── testng/             # TestNG suite XML files and execution configurations
+├── Dockerfile                      # Docker image definition for test execution
 ├── Jenkinsfile                     # Jenkins pipeline definition for CI execution
 └── pom.xml                         # Maven project configuration and dependency management
 ```
@@ -55,6 +57,7 @@ restassured-petstore/
 ## Prerequisites
  - Java 21 or higher
  - Maven 3.6+
+ - Docker
  - IDE (IntelliJ IDEA, Eclipse, or VS Code)
 
 ## Installation
@@ -72,7 +75,7 @@ restassured-petstore/
 
 ## Running Tests
 
-### Running all tests:
+### Run locally using Maven:
 ```bash
 mvn clean test
 ```
@@ -90,6 +93,35 @@ mvn test -DsuiteXmlFile=testng.xml
 ### Running from IDE:
  - Right-click on testng.xml and click run
  - Or run PetTest.java directly
+
+### Running Tests via Docker
+ - Build Docker image
+    ```bash
+    docker build -t restassured-petstore-tests .
+    ```
+ - Run tests inside Docker container
+    ```bash
+    docker run --rm \
+        -v $(pwd)/target:/app/target \
+        -v $(pwd)/reports:/app/reports \
+        -v $(pwd)/logs:/app/logs \
+        restassured-petstore-tests
+    ```
+    Reports and logs will be available locally after execution.
+
+## Running Tests via Jenkins
+
+This project includes a Jenkinsfile for pipeline execution.
+
+### Jenkins requirements
+ - Jenkins installed and running with Pipeline support enabled
+ - Docker installed on Jenkins agent with proper execution permissions
+ - Source control integration configured (e.g., GitHub with credentials or token)
+ - Required plugins:
+   - Pipeline
+   - Git
+ - Network access enabled for Docker image pulls and API endpoints under test
+
 
 ## Reports
 After test execution, detailed HTML reports are available at:
