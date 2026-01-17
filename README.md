@@ -49,7 +49,6 @@ restassured-petstore/
 │       └── resources/
 │           ├── testdata/           # External test data for data-driven testing
 │           └── testng/             # TestNG suite XML files and execution configurations
-├── .dockerignore                   # Docker ignore rules for optimized image builds
 ├── Dockerfile                      # Docker image definition for test execution
 ├── Jenkinsfile                     # Jenkins pipeline definition for CI execution
 └── pom.xml                         # Maven project configuration and dependency management
