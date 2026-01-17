@@ -97,17 +97,13 @@ pipeline {
     post {
         success {
             echo 'Tests executed successfully'
-            archiveArtifacts artifacts: 'reports/**/*.html', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'logs/**/*.log', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/PetStore_Test_Report.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'logs/test-logs.log', allowEmptyArchive: true
         }
         failure {
             echo 'Build failed. Please review test reports.'
-            archiveArtifacts artifacts: 'reports/**/*.html', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'logs/**/*.log', allowEmptyArchive: true
-        }
-        always {
-        
-            publishTestResults testResultsPattern: 'target/surefire-reports/**/*.xml'
+            archiveArtifacts artifacts: 'reports/PetStore_Test_Report.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'logs/test-logs.log', allowEmptyArchive: true
         }
     }
 }
