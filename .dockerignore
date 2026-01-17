@@ -1,0 +1,33 @@
+# Git files
+.git
+.gitignore
+
+# IDE files
+.idea
+.vscode
+*.iml
+*.iws
+*.ipr
+
+# Build outputs (will be regenerated in container)
+target/
+!target/classes
+!target/test-classes
+
+# Reports and logs (will be generated in container)
+reports/
+logs/
+
+# Documentation
+README.md
+*.md
+
+# Assets (not needed for build)
+assets/
+
+# Jenkins
+Jenkinsfile
+
+# OS files
+.DS_Store
+Thumbs.db
