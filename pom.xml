@@ -17,7 +17,7 @@
         <testng.version>7.10.2</testng.version>
         <lombok.version>1.18.36</lombok.version>
         <extentreports.version>5.1.2</extentreports.version>
-        <poi.version>5.3.0</poi.version>
+        <poi.version>5.5.1</poi.version>
         <log4j.version>2.25.3</log4j.version>
         <surefire.plugin.version>3.2.5</surefire.plugin.version>
     </properties>
