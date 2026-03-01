@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <rest.assured.version>6.0.0</rest.assured.version>
-        <testng.version>7.10.2</testng.version>
+        <testng.version>7.12.0</testng.version>
         <lombok.version>1.18.36</lombok.version>
         <extentreports.version>5.1.2</extentreports.version>
         <poi.version>5.5.1</poi.version>
