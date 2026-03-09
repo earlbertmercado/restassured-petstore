@@ -19,7 +19,7 @@
         <extentreports.version>5.1.2</extentreports.version>
         <poi.version>5.5.1</poi.version>
         <log4j.version>2.25.3</log4j.version>
-        <surefire.plugin.version>3.5.4</surefire.plugin.version>
+        <surefire.plugin.version>3.5.5</surefire.plugin.version>
     </properties>
 
     <dependencies>
